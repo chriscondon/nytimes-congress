@@ -1,6 +1,6 @@
 module NYTimes
 	module Congress
-		class Congress < Base
+		class Session < Base
 		  attr_reader :number, :session, :chamber
 		  
 		  include AttributeTransformation
@@ -16,7 +16,7 @@ module NYTimes
       end
       
       def self.new_members(params = {})
-        Congress.fetch_new_members
+        Session.fetch_new_members
       end
       
       def current_member_for_state_district(state, district=nil)
